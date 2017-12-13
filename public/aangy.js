@@ -8,13 +8,18 @@ angular.module('submission', [])
           if (firebase.auth().currentUser) {
             $scope.userImage = firebase.auth().currentUser.photoURL;
             var array = firebase.auth().currentUser.email.split("@");
-            $scope.userName = firebase.auth().currentUser.email;
+            $scope.userName = array[0];
             $scope.stopThing();
             console.log($scope.userName);
           } else {
             $scope.userImage = "https://www.drupal.org/files/issues/default-avatar.png";
           }
         }, 100);
+
+        $scope.stopThing = function() {
+            $interval.cancel($scope.thing);
+          }
+
         $scope.random_name = "";
         $scope.random_place = "";
         $scope.random_object = "";
