@@ -3,7 +3,7 @@ angular.module('fakeNews', [])
   '$scope', '$http', '$interval',
   function($scope, $http, $interval){
     $scope.userimage = "";
-    $interval(function() {
+    $scope.thing = $interval(function() {
       if (firebase.auth().currentUser) {
         $scope.userimage = firebase.auth().currentUser.photoURL;
         $interval.cancel();
@@ -11,7 +11,11 @@ angular.module('fakeNews', [])
       } else {
         $scope.userimage = "hello";
       }
-    }, 100)
+    }, 100);
+
+    $scope.stopThing = function() {
+      $interval.cancel($scope.thing);
+    }
     
     $scope.posts = [];
     $scope.addUpVote = function(post) {
