@@ -48,7 +48,9 @@ router.get('/userHeadlines/:userName', function(req, res) {
   });
 });
 
-router.param('userName')
+router.param('userName', function(userName){
+  return userName;}
+);
 
 router.param('headline', function(req, res, next, id) {
   var query = Headline.findById(id);
