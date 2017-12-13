@@ -2,10 +2,12 @@ angular.module('submission', [])
 .controller('MainCtrl', [
     '$scope', '$http', '$interval',
     function($scope, $http, $interval) {
-        $scope.userimage = "";
+        $scope.userName = "Anonymous";
+        $scope.userImage = 
         $scope.thing = $interval(function() {
           if (firebase.auth().currentUser) {
-            $scope.userimage = firebase.auth().currentUser.photoURL;
+            $scope.userImage = firebase.auth().currentUser.photoURL;
+            $scope.userName = firebase.auth().currentUser.email.split().at(0);
             $scope.stopThing();
             console.log("fdsa");
           } else {
