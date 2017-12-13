@@ -3,15 +3,16 @@ angular.module('submission', [])
     '$scope', '$http', '$interval',
     function($scope, $http, $interval) {
         $scope.userName = "Anonymous";
-        $scope.userImage = 
+        $scope.userImage = "https://www.drupal.org/files/issues/default-avatar.png";
         $scope.thing = $interval(function() {
           if (firebase.auth().currentUser) {
             $scope.userImage = firebase.auth().currentUser.photoURL;
-            $scope.userName = firebase.auth().currentUser.email.split("@").at(0);
+            var array = firebase.auth().currentUser.email.split("@");
+            $scope.userName = array.at(0);
             $scope.stopThing();
-            console.log("fdsa");
+            console.log("userName");
           } else {
-            $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
+            $scope.userImage = "https://www.drupal.org/files/issues/default-avatar.png";
           }
         }, 100);
         $scope.random_name = "";
