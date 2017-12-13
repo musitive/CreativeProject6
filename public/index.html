@@ -59,8 +59,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/account">Account</a>
-              {{userimage}}
-              <img class="user-image" src="{{userimage}}" alt="">
+              <img class="user-image"  ng-src={{userimage}} alt="">
             </li>
           </ul>
         </div>
@@ -100,7 +99,7 @@
             <div id="fakeNewsPic"><h4>{{fakeNews.title}}</h4>
             </div>
             
-            <img class="img-fluid post" src={{fakeNews.image}} alt="">
+            <img class="img-fluid post" ng-src={{fakeNews.image}} alt="">
                 {{fakeNews.description}}
             <br>
             <div class="like_dislike">
