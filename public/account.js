@@ -7,6 +7,8 @@ angular.module('fakeNews', [])
       if (firebase.auth().currentUser) {
         $scope.userimage = firebase.auth().currentUser.photoURL;
         $scope.stopThing();
+        var array = firebase.auth().currentUser.email.split("@");
+        $scope.userName = array[0];
         console.log("fdsa");
         $scope.accountRoute = "/user"
       } else {
