@@ -3,6 +3,8 @@
  * Copyright 2013-2017 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-portfolio-item/blob/master/LICENSE)
  */
+ .user-image{
+  border-radius: 5px;  width: 50px; }
 
 body {
   padding-top: 54px;
