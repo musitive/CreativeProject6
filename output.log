@@ -1,299 +1,40 @@
 nohup: ignoring input
-before / Route
-/ Route
-Session {
-  cookie: 
-   { path: '/',
-     _expires: 2018-01-04T07:53:03.218Z,
-     originalMaxAge: 2628000000,
-     httpOnly: true } }
-/ Route else user
-[0mGET / [36m302 [0m11.766 ms - 56[0m
-/login Route
-[0mGET /login [32m200 [0m6.902 ms - 735[0m
-[0mGET /stylesheets/style.css [36m304 [0m2.507 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m3.330 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-/signup Route
-[0mGET /signup [32m200 [0m8.770 ms - 783[0m
-[0mGET /stylesheets/style.css [36m304 [0m1.214 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m1.251 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-Begin exports.signup
-after new user exports.signup
-after hashing user exports.signup
-after email user exports.signup
-(node:24344) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
-In exports.signup
-null
-[0mPOST /signup [36m302 [0m50.693 ms - 46[0m
-/ Route
-Session {
-  cookie: 
-   { path: '/',
-     _expires: 2018-01-06T12:29:45.206Z,
-     originalMaxAge: 2628000000,
-     httpOnly: true },
-  msg: 'Authenticated as wowser',
-  user: '5a28a799080f2f185fec72c2',
-  username: 'wowser' }
-/ Route if user
-[0mGET / [32m200 [0m3.362 ms - 786[0m
-[0mGET /stylesheets/style.css [36m304 [0m4.352 ms - -[0m
-[0mGET /javascripts/my_app.js [32m200 [0m4.036 ms - 401[0m
-[0mGET /user/profile [32m200 [0m9.287 ms - 158[0m
-[0mGET /favicon.ico [31m500 [0m1.377 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-/user Route
-[0mGET /user [32m200 [0m2.221 ms - 1227[0m
-[0mGET /stylesheets/style.css [36m304 [0m1.752 ms - -[0m
-[0mGET /javascripts/my_app.js [36m304 [0m1.509 ms - -[0m
-[0mGET /user/profile [36m304 [0m4.876 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m1.229 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-[0mPOST /user/update [36m302 [0m7.293 ms - 54[0m
-/user Route
-[0mGET /user [32m200 [0m3.361 ms - 1217[0m
-[0mGET /stylesheets/style.css [36m304 [0m2.085 ms - -[0m
-[0mGET /javascripts/my_app.js [36m304 [0m2.431 ms - -[0m
-[0mGET /user/profile [32m200 [0m1.464 ms - 175[0m
-[0mGET /favicon.ico [31m500 [0m1.083 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-/ Route
-Session {
-  cookie: 
-   { path: '/',
-     _expires: 2018-01-06T12:30:03.452Z,
-     originalMaxAge: 2628000000,
-     httpOnly: true },
-  msg: 'User Updated.',
-  user: '5a28a799080f2f185fec72c2',
-  username: 'wowser',
-  color: 'wowser' }
-/ Route if user
-[0mGET / [32m200 [0m1.200 ms - 782[0m
-[0mGET /stylesheets/style.css [36m304 [0m1.071 ms - -[0m
-[0mGET /javascripts/my_app.js [36m304 [0m0.671 ms - -[0m
-[0mGET /user/profile [36m304 [0m3.382 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m1.273 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-/user Route
-[0mGET /user [36m304 [0m0.769 ms - -[0m
-[0mGET /javascripts/my_app.js [36m304 [0m1.445 ms - -[0m
-[0mGET /stylesheets/style.css [36m304 [0m1.431 ms - -[0m
-[0mGET /user/profile [36m304 [0m1.979 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m0.736 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-/ Route
-Session {
-  cookie: 
-   { path: '/',
-     _expires: 2018-01-06T12:30:15.888Z,
-     originalMaxAge: 2627999999,
-     httpOnly: true },
-  msg: 'User Updated.',
-  user: '5a28a799080f2f185fec72c2',
-  username: 'wowser',
-  color: 'wowser' }
-/ Route if user
-[0mGET / [36m304 [0m0.946 ms - -[0m
-[0mGET /stylesheets/style.css [36m304 [0m1.465 ms - -[0m
-[0mGET /javascripts/my_app.js [36m304 [0m1.477 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m3.539 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-[0mGET /user/profile [36m304 [0m5.506 ms - -[0m
-/logout Route
-[0mGET /logout [36m302 [0m1.994 ms - 56[0m
-/login Route
-[0mGET /login [32m200 [0m1.698 ms - 721[0m
-[0mGET /stylesheets/style.css [36m304 [0m2.082 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m2.707 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-[0mPOST /login [36m302 [0m3.247 ms - 56[0m
-/login Route
-[0mGET /login [32m200 [0m0.722 ms - 736[0m
-[0mGET /stylesheets/style.css [36m304 [0m0.785 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m0.815 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-[0mPOST /login [36m302 [0m1.547 ms - 56[0m
-/login Route
-[0mGET /login [32m200 [0m0.682 ms - 736[0m
-[0mGET /stylesheets/style.css [36m304 [0m0.790 ms - -[0m
-[0mGET /favicon.ico [31m500 [0m1.405 ms - 1884[0m
-Error: Failed to lookup view "error" in views directory "/opt/bitnami/apache2/htdocs/lab6/views"
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:579:17)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:70:9
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
-    at IncomingMessage.next (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:271:10)
-    at done (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:956:25)
-    at EventEmitter.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/application.js:581:14)
-    at ServerResponse.render (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/response.js:961:7)
-    at /opt/bitnami/apache2/htdocs/lab6/app.js:59:13
-    at Layer.handle_error (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/layer.js:71:5)
-    at trim_prefix (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:310:13)
-    at /opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:280:7
-    at Function.process_params (/opt/bitnami/apache2/htdocs/lab6/node_modules/express/lib/router/index.js:330:12)
+[0mGET /index.html [32m200 [0m7.107 ms - 4136[0m
+[0mGET /css/portfolio-item.css [32m200 [0m1.647 ms - 1548[0m
+[0mGET /app.js [32m200 [0m2.494 ms - 1059[0m
+[0mGET /vendor/bootstrap/css/bootstrap.min.css [32m200 [0m1.783 ms - 127343[0m
+[0mGET /vendor/bootstrap/js/bootstrap.bundle.min.js [32m200 [0m0.740 ms - 69453[0m
+[0mGET /vendor/jquery/jquery.min.js [32m200 [0m0.473 ms - 86659[0m
+[0mGET /%7B%7BfakeNews.image%7D%7D [33m404 [0m290.680 ms - 1946[0m
+[0mGET /headlines [36m304 [0m42.606 ms - -[0m
+[0mGET /fake_news_like.png [32m200 [0m33.923 ms - 8762[0m
+[0mGET /fake_news_dislike.png [32m200 [0m33.990 ms - 25067[0m
+[0mGET /news.jpg [32m200 [0m0.404 ms - 251683[0m
+[0mGET /fake_video-1.mp4 [32m200 [0m43.607 ms - 21081922[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.828 ms - 21081922[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m3.118 ms - 110402[0m
+[0mGET /fake_news_toliet_paper.png [32m200 [0m0.407 ms - 6055[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.605 ms - 21049154[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.435 ms - 21016386[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.448 ms - 20950850[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.504 ms - 20918082[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.491 ms - 20983618[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m1.102 ms - 20885314[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.534 ms - 20852546[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m1.002 ms - 20819778[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.493 ms - 20787010[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.706 ms - 20754242[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.804 ms - 20688706[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.557 ms - 20721474[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.586 ms - 20655938[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.538 ms - 20623170[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.572 ms - 20590402[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.732 ms - 20557634[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m0.795 ms - 20524866[0m
+[0mGET /fake_video-1.mp4 [32m206 [0m1.167 ms - 20492098[0m
+[0mGET /post [32m200 [0m2.843 ms - 4363[0m
+[0mGET /vendor/bootstrap/css/bootstrap.min.css [36m304 [0m0.892 ms - -[0m
+[0mGET /css/portfolio-item.css [36m304 [0m4.766 ms - -[0m
+[0mGET /vendor/jquery/jquery.min.js [36m304 [0m0.686 ms - -[0m
+[0mGET /vendor/bootstrap/js/bootstrap.bundle.min.js [36m304 [0m0.568 ms - -[0m
+[0mGET /aangy.js [32m200 [0m1.288 ms - 25459[0m
