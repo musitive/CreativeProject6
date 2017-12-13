@@ -100,6 +100,7 @@
         <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts | orderBy: '-upvotes'">
             <img class="user-image" ng-src={{fakeNews.userImage}} alt="" style="width:25px;">
             {{fakeNews.userName}}
+            <br>
             <div id="fakeNewsPic"><h4>{{fakeNews.title}}</h4>
             </div>
             
