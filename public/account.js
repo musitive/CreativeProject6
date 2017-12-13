@@ -9,6 +9,7 @@ angular.module('fakeNews', [])
         $scope.stopThing();
         var array = firebase.auth().currentUser.email.split("@");
         $scope.userName = array[0];
+        $scope.getAll();
         console.log("fdsa");
         $scope.accountRoute = "/user"
       } else {
@@ -28,6 +29,5 @@ angular.module('fakeNews', [])
             angular.copy(data, $scope.posts);
             });
         };
-      $scope.getAll();
   }
 ]);
