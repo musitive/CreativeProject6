@@ -6,10 +6,10 @@ angular.module('fakeNews', [])
     $scope.thing = $interval(function() {
       if (firebase.auth().currentUser) {
         $scope.userimage = firebase.auth().currentUser.photoURL;
-        $scope.stopThing();
         var array = firebase.auth().currentUser.email.split("@");
         $scope.userName = array[0];
-        $scope.getAll();
+        $scope.stopThing();
+        console.log("fdsa");
         $scope.accountRoute = "/user"
       } else {
         $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
@@ -23,10 +23,11 @@ angular.module('fakeNews', [])
     
     $scope.posts = [];
     $scope.getAll = function() {
-        return $http.get('/userHeadlines/' + $scope.userName).success(function(data){
+        return $http.get('/headlines').success(function(data){
             console.log(data); 
             angular.copy(data, $scope.posts);
             });
         };
+      $scope.getAll();
   }
 ]);

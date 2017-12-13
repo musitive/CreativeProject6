@@ -89,7 +89,7 @@
       <hr>
 
       <div class="row">
-        <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts">
+        <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts | filter:userName">
             
             <div id="fakeNewsPic"><h4>{{fakeNews.title}}</h4>
             </div>
