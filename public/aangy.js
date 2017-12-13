@@ -8,9 +8,9 @@ angular.module('submission', [])
           if (firebase.auth().currentUser) {
             $scope.userImage = firebase.auth().currentUser.photoURL;
             var array = firebase.auth().currentUser.email.split("@");
-            $scope.userName = array.at(0);
+            $scope.userName = firebase.auth().currentUser.email;
             $scope.stopThing();
-            console.log("userName");
+            console.log($scope.userName);
           } else {
             $scope.userImage = "https://www.drupal.org/files/issues/default-avatar.png";
           }
