@@ -2,6 +2,7 @@ angular.module('fakeNews', [])
 .controller('MainCtrl', [
   '$scope', '$http',
   function($scope, $http){
+    $scope.userimage = "";
     $scope.loadNoods = function() {
       if (firebase.auth().currentUser) {
         $scope.userimage = firebase.auth().currentUser.photoURL;
