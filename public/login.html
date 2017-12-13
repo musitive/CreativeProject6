@@ -134,6 +134,7 @@
           // [START authstatelistener]
           firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
+              <a class="nav-link" ng-href="{{accountRoute}}">Account</a>
               // User is signed in.
               var displayName = user.displayName;
               var email = user.email;
