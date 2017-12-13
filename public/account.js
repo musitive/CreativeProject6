@@ -8,7 +8,7 @@ angular.module('fakeNews', [])
         $scope.userimage = firebase.auth().currentUser.photoURL;
         $scope.stopThing();
         console.log("fdsa");
-        $http.get('/user').success(function(){});
+        return $http.get('/user').success(function(){});
       } else {
         $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
       }
