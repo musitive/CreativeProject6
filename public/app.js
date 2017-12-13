@@ -5,7 +5,7 @@ angular.module('fakeNews', [])
     if (firebase.auth().currentUser) {
       $scope.userimage = firebase.auth().currentUser.photoURL;
     } else {
-      $scope.userimage = "";
+      $scope.userimage = "hello";
     }
     
     $scope.posts = [];
