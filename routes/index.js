@@ -40,9 +40,9 @@ router.get('/headlines', function(req, res, next) {
   });
 });
 
-router.get('/userHeadlines', function(req, res) {
-  console.log(req);
-  Headline.find(req.body, function(err, headlines){
+router.get('/userHeadlines/:user', function(req, res) {
+  console.log(user);
+  Headline.find(user, function(err, headlines){
     if(err){ return next(err); }
     res.json(headlines);
   });
