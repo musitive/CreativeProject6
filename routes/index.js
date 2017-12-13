@@ -18,6 +18,11 @@ router.get('/account', function(req, res, next) {
   res.sendFile('login.html', { root: 'public' });
 });
 
+/* GET user page */
+router.get('/user', function(req, res, next) {
+  res.sendFile('user.html', { root: 'public' });
+});
+
 /* POST submission. */
 router.post('/headlines', function(req, res, next) {
   var headline = new Headline(req.body);
