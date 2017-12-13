@@ -41,7 +41,7 @@ router.get('/headlines', function(req, res, next) {
 });
 
 router.get('/userHeadlines', function(req, res, next) {
-  res.json(Headline.find(req));
+  res.json(Headline.find(req.body));
 });
 
 router.param('headline', function(req, res, next, id) {
