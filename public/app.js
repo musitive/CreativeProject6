@@ -1,6 +1,6 @@
 angular.module('fakeNews', [])
 .controller('MainCtrl', [
-  '$scope', '$http',
+  '$scope', '$http', '$interval',
   function($scope, $http, $interval){
     $scope.userimage = "";
     $interval(function() {
