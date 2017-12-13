@@ -9,7 +9,7 @@ angular.module('fakeNews', [])
       } else {
         $scope.userimage = "hello";
       }
-    }, 1000)
+    }, 100)
     
     $scope.posts = [];
     $scope.addUpVote = function(post) {
