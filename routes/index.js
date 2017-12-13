@@ -40,15 +40,15 @@ router.get('/headlines', function(req, res, next) {
   });
 });
 
-router.get('/userHeadlines/:user', function(req, res) {
-  console.log(user);
-  Headline.find(user, function(err, headlines){
+router.get('/userHeadlines/:userName', function(req, res) {
+  console.log(req.userName);
+  Headline.find(req.userName, function(err, headlines){
     if(err){ return next(err); }
     res.json(headlines);
   });
 });
 
-router.param('user', function(req, res, next, id) {
+router.param('userName', function(req, res, next, id) {
   return req.userName;
 });
 
