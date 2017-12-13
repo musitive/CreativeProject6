@@ -2,6 +2,16 @@ angular.module('submission', [])
 .controller('MainCtrl', [
     '$scope', '$http',
     function($scope, $http) {
+        $scope.userimage = "";
+        $scope.thing = $interval(function() {
+          if (firebase.auth().currentUser) {
+            $scope.userimage = firebase.auth().currentUser.photoURL;
+            $scope.stopThing();
+            console.log("fdsa");
+          } else {
+            $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
+          }
+        }, 100);
         $scope.random_name = "";
         $scope.random_place = "";
         $scope.random_object = "";
