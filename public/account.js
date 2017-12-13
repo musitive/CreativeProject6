@@ -21,6 +21,11 @@ angular.module('fakeNews', [])
       $interval.cancel($scope.thing);
     }
     
+    $scope.signOut = function() {
+      firebase.auth().signOut();
+      window.location = "login.html"
+    }
+    
     $scope.posts = [];
     $scope.getAll = function() {
         return $http.get('/headlines').success(function(data){
