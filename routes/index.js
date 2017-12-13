@@ -41,16 +41,14 @@ router.get('/headlines', function(req, res, next) {
 });
 
 router.get('/userHeadlines/:userName', function(req, res) {
-  console.log(req.userName);
-  Headline.find(req.userName, function(err, headlines){
+  console.log(req.params.userName);
+  Headline.find(req.params.userName, function(err, userName){
     if(err){ return next(err); }
-    res.json(headlines);
+    res.json(userName);
   });
 });
 
-router.param('userName', function(req, res, next, id) {
-  return req.userName;
-});
+router.param('userName')
 
 router.param('headline', function(req, res, next, id) {
   var query = Headline.findById(id);
