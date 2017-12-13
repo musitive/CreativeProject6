@@ -75,7 +75,7 @@
       <hr>
 
       <div class="row">
-        <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts | orderBy: '-upvotes'">
+        <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts">
             
             <div id="fakeNewsPic"><h4>{{fakeNews.title}}</h4>
             </div>
@@ -85,8 +85,6 @@
             <br>
             <div class="like_dislike">
                 Likes | {{fakeNews.upvotes}}
-                 <img src="fake_news_like.png" id="like" ng-click="addUpVote(fakeNews)">
-                 <img src="fake_news_dislike.png" id = "dislike" ng-click="addDownVote(fakeNews)">
             </div>
         </div>
       </div>
