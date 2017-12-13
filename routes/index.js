@@ -63,11 +63,11 @@ router.put('/headlines/:headline/downvote', function(req, res, next) {
   });
 });
 
-/*
+
 router.get('/deleteSecretPasswordToDeleteAMAMAMAM', function(req,res,next) {
 	console.log("Delete Post");
 	Headline.collection.remove();
 	res.sendStatus(200);
 })
-*/
+
 module.exports = router;
