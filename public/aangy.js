@@ -1,7 +1,7 @@
 angular.module('submission', [])
 .controller('MainCtrl', [
     '$scope', '$http', '$interval',
-    function($scope, $http) {
+    function($scope, $http, $interval) {
         $scope.userimage = "";
         $scope.thing = $interval(function() {
           if (firebase.auth().currentUser) {
