@@ -21,7 +21,7 @@ angular.module('fakeNews', [])
     
     $scope.posts = [];
     $scope.getAll = function() {
-        return $http.get('/userHeadlines').success(function(data){
+        return $http.get('/userHeadlines', {userName: $scope.userName}).success(function(data){
             console.log(data); 
             angular.copy(data, $scope.posts);
             });
