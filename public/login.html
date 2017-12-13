@@ -133,9 +133,7 @@
           // Listening for auth state changes.
           // [START authstatelistener]
           firebase.auth().onAuthStateChanged(function(user) {
-            <script>
-                window.location = "http://ec2-18-220-136-196.us-east-2.compute.amazonaws.com:3005/user.html";
-            </script>
+            
             if (user) {
               // User is signed in.
               var displayName = user.displayName;
