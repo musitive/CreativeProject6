@@ -38,7 +38,9 @@ angular.module('submission', [])
                 var json = {
                     title: $scope.headline,
                     image: $scope.random_img,
-                    description: $scope.description
+                    description: $scope.description,
+                    userName: $scope.userName,
+                    userImage: $scope.userImage
                 }
                 alert("Your article is now live!  Check the home page or submit a new article!");                
                 return $http.post('/headlines', json).success(function(data){

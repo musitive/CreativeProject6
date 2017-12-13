@@ -55,7 +55,7 @@
               <a class="nav-link" href="/account">Account</a>
             </li>
             <li>
-                <img class="user-image" ng-src={{userimage}} alt="">
+                <img class="user-image" ng-src={{userImage}} alt="">
             </li>
           </ul>
         </div>
@@ -89,6 +89,8 @@
             <small>Before you click submit, feel free to edit the post below!</small>
             <br>
             <h3 class="my-3" style="text-align:center">Fake Article Preview</h3>
+            <img class="user-image" ng-src={{userImage}} alt="" style="width:10px;">
+            {{userName}}
             <h4><textarea class="headline" placeholder="Your Headline" ng-model="headline"></textarea></h4>
             <img ng-src="{{random_img}}" style="width:100%;height:auto;"/>
             <br><br>
