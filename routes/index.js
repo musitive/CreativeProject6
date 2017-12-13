@@ -48,6 +48,10 @@ router.get('/userHeadlines/:user', function(req, res) {
   });
 });
 
+router.param('user', function(req, res, next, id) {
+  return id;
+});
+
 router.param('headline', function(req, res, next, id) {
   var query = Headline.findById(id);
   query.exec(function (err, headline){
