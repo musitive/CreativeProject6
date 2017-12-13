@@ -1,14 +1,3 @@
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyDcuN9VyRVZ36knkAHM8JwfDilDggAmYRo",
-  authDomain: "creativity-at-its-finest.firebaseapp.com",
-  databaseURL: "https://creativity-at-its-finest.firebaseio.com",
-  projectId: "creativity-at-its-finest",
-  storageBucket: "",
-  messagingSenderId: "167818529111"
-};
-firebase.initializeApp(config);
-
 angular.module('fakeNews', [])
 .controller('MainCtrl', [
   '$scope', '$http',
