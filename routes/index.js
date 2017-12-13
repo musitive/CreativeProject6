@@ -41,7 +41,7 @@ router.get('/headlines', function(req, res, next) {
 });
 
 router.get('/userHeadlines', function(req, res) {
-  console.log(req.userName);
+  console.log(req);
   Headline.find(req.body, function(err, headlines){
     if(err){ return next(err); }
     res.json(headlines);
