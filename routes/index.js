@@ -40,8 +40,11 @@ router.get('/headlines', function(req, res, next) {
   });
 });
 
-router.get('/userHeadlines', function(req, res, next) {
-  res.json(Headline.find(req.body));
+router.get('/userHeadlines', function(req, res) {
+  Headline.find(req.body, function(err, headlines){
+    if(err){ return next(err); }
+    res.json(headlines);
+  });
 });
 
 router.param('headline', function(req, res, next, id) {
