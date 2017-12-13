@@ -2,7 +2,7 @@ angular.module('fakeNews', [])
 .controller('MainCtrl', [
   '$scope', '$http',
   function($scope, $http){
-    if (firebase.auth().currentUser != null) {
+    if (!firebase.auth().currentUser) {
       $scope.userimage = firebase.auth().currentUser.photoURL;
     } else {
       $scope.userimage = "";
