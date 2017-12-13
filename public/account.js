@@ -10,7 +10,6 @@ angular.module('fakeNews', [])
         var array = firebase.auth().currentUser.email.split("@");
         $scope.userName = array[0];
         $scope.getAll();
-        console.log("fdsa");
         $scope.accountRoute = "/user"
       } else {
         $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
@@ -24,7 +23,6 @@ angular.module('fakeNews', [])
     
     $scope.posts = [];
     $scope.getAll = function() {
-      console.log($scope.userName);
         return $http.get('/userHeadlines', {userName: $scope.userName}).success(function(data){
             console.log(data); 
             angular.copy(data, $scope.posts);
