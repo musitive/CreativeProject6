@@ -6,7 +6,7 @@ angular.module('fakeNews', [])
     $scope.thing = $interval(function() {
       if (firebase.auth().currentUser) {
         $scope.userimage = firebase.auth().currentUser.photoURL;
-        $interval.cancel();
+        $scope.stopThing();
         console.log("fdsa");
       } else {
         $scope.userimage = "hello";
