@@ -15,7 +15,7 @@ router.get('/post', function(req, res, next) {
 
 /* GET account page */
 router.get('/account', function(req, res, next) {
-  res.sendFile('submit.html', { root: 'public' });
+  res.sendFile('login.html', { root: 'public' });
 });
 
 /* POST submission. */
