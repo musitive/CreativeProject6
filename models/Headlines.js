@@ -4,6 +4,8 @@ var HeadlineSchema = new mongoose.Schema({
   upvotes: {type: Number, default: 0},
   image: String,
   description: String,
+  userName: String,
+  userImage: String
 });
 HeadlineSchema.methods.upvote = function(cb) {
     this.upvotes += 1;
