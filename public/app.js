@@ -9,7 +9,7 @@ angular.module('fakeNews', [])
         $scope.stopThing();
         console.log("fdsa");
       } else {
-        $scope.userimage = "hello";
+        $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
       }
     }, 100);
 
