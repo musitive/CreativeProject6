@@ -1,33 +1,46 @@
-	<html ng-app="myApp">
-    
+<html>
 <head>
     <title>User Login and Sessions</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="fake_news_toliet_paper.png">
+    <!-- Custom styles for this template -->
+    <link href="css/portfolio-item.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 </head>
         
 <body>  
-    <div class="form-container" ng-controller="myController">
-        <p id="sectionTitle" class="form-header">User Profile</p>
-        <form method="POST" action="/user/update">
-            <label>Username:</label>
-            <input type="text" id="username" name="username" ng-model="user.username" disabled><br>
-            <label>Email:</label>
-            <input type="email" id="email" name="email" ng-model="user.email"><br>          
-            <label>Favorite Color:</label>
-            <input type="text" id="color" name="color" ng-model="user.color"><br>   
-            <input class="button" type="submit" id="save" value="Save">
-        </form>
+    <div ng-controller="MainCtrl">
+    	<h2>My Posts</h2>
+        <hr>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-4" ng-repeat="fakeNews in posts | orderBy: '-upvotes'">
+
+              <div id="fakeNewsPic"><h4>{{fakeNews.title}}</h4>
+              </div>
+
+              <img class="img-fluid post" ng-src={{fakeNews.image}} alt="">
+                  {{fakeNews.description}}
+              <br>
+              <div class="like_dislike">
+                  Likes | {{fakeNews.upvotes}}
+                   <img src="fake_news_like.png" id="like" ng-click="addUpVote(fakeNews)">
+                   <img src="fake_news_dislike.png" id = "dislike" ng-click="addDownVote(fakeNews)">
+              </div>
+          </div>
+        </div>
+
     </div>
-    <form method="POST" action="/user/delete">
-        <input class="button" type="submit" id="delete" value="Delete User">
-    </form>
-    <hr>
-    <span id="userMsg">
-    <%= msg %>
-    </span>
     <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
     <script src="/javascripts/my_app.js"></script>
-    <a id="homeLink" href="/">Home</a>
 </body>
-
 </html>
