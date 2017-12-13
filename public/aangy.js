@@ -10,9 +10,10 @@ angular.module('submission', [])
             var array = firebase.auth().currentUser.email.split("@");
             $scope.userName = array[0];
             $scope.stopThing();
-            console.log($scope.userName);
-          } else {
-            $scope.userImage = "https://www.drupal.org/files/issues/default-avatar.png";
+            $scope.accountRoute = "/user"
+      } else {
+        $scope.userimage = "https://www.drupal.org/files/issues/default-avatar.png";
+        $scope.accountRoute = "/account"
           }
         }, 100);
 
